@@ -1,0 +1,7 @@
+//Início
+double F, C;
+Console.WriteLine("Digite um valor em fahrenheit:");
+F = Convert.ToDouble(Console.ReadLine());
+C = (F - 32) * 5 / 9;
+Console.WriteLine("O seu valor em Celsius é: " + C);
+//Fim
