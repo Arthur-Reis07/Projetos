@@ -1,11 +1,19 @@
 //Início
-int IdadeDias, anos, meses, dias;
-Console.WriteLine("Digite uma idade em dias:");
-IdadeDias =Convert.ToInt32(Console.ReadLine());
-anos = IdadeDias / 365;
-IdadeDias = IdadeDias - anos * 365;
-meses = IdadeDias / 30;
-IdadeDias = IdadeDias - meses * 30;
-dias = IdadeDias;
-Console.WriteLine("Sua idade é aproximadamente: " + anos +"ano(s)," + meses+"mês(es)," +dias+"dia(s)");
+int idadeDias, anos, meses, dias;
+
+Console.WriteLine("Digite uma idade em dias: ");
+idadeDias = Convert.ToInt32(Console.ReadLine());
+
+// Calcular anos
+anos = idadeDias / 365;
+idadeDias = idadeDias % 365;
+
+// Calcular meses
+meses = idadeDias / 30;
+idadeDias = idadeDias % 30;
+
+// Dias restantes
+dias = idadeDias;
+
+Console.WriteLine("Sua idade é: " + anos + " ano(s), " + meses + " mês(es), " + dias + " dia(s)");
 //Fim
